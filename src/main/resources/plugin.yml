@@ -1,0 +1,5 @@
+name: sbanplugin
+main: com.github.startzyp.sbanplugin.main
+version: 1.0
+commands:
+  sban:

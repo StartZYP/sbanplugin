@@ -1,2 +1,9 @@
 #玩家刚进服务器检查的时间
 CheckSpace: 20
+#单客户端同时在线个数
+Online: 3
+#禁封的机器码
+BanCode:
+  - "DE9FE5C5F"
+  - "FE888CE9W"
+  - "FE8W8CC88E"

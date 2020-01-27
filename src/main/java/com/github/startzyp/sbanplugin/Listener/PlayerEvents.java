@@ -47,17 +47,17 @@ public class PlayerEvents implements Listener {
                                 number+=1;
                             }
                         }
-                        if (number>=3){
-                            Bukkit.getServer().getPlayer(uniqueId).kickPlayer("你所在的机器已经开满三个客户端，所以被禁止");
+                        if (number>=main.Online){
+                            Bukkit.getServer().getPlayer(uniqueId).kickPlayer("§e§l[SBan]§4§l你所在的机器已经开满三个客户端，所以被禁止");
                         }
                     }else {
-                        Bukkit.getServer().getPlayer(uniqueId).kickPlayer("你未安装SbanMod");
+                        Bukkit.getServer().getPlayer(uniqueId).kickPlayer("§e§l[SBan]§4§l你未安装SbanMod");
                     }
                 }else {
                     main.playerrebootcode.remove(name);
                 }
 
             }
-        }, 20L *10);
+        }, 20L *main.CheckSpace);
     }
 }
