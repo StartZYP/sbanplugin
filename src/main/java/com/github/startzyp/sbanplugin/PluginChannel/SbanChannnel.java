@@ -19,9 +19,12 @@ public class SbanChannnel implements PluginMessageListener {
 
     @Override
     public void onPluginMessageReceived(String channel, Player player, byte[] message) {
-        Gson gson = new Gson();
-        PlayerData playerData = gson.fromJson(new String(message, StandardCharsets.UTF_8), PlayerData.class);
-        System.out.println(playerData.toString());
-        main.playerrebootcode.put(playerData.getPlayername(),playerData.getRebootCode());
+        System.out.println(channel);
+        if (channel.equalsIgnoreCase("sban")){
+            Gson gson = new Gson();
+            PlayerData playerData = gson.fromJson(new String(message, StandardCharsets.UTF_8), PlayerData.class);
+            System.out.println(playerData.toString());
+            main.playerrebootcode.put(playerData.getPlayername(),playerData.getRebootCode());
+        }
     }
 }
