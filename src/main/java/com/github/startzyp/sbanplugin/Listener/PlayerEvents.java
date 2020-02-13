@@ -37,6 +37,10 @@ public class PlayerEvents implements Listener {
                     if (main.playerrebootcode.containsKey(name)){
                         int number =0;
                         String rebootcode = main.playerrebootcode.get(name);
+                        if (main.bancode.contains(rebootcode)){
+                            Bukkit.getServer().getPlayer(uniqueId).kickPlayer("§e§l[SBan]§4§l您的机器已被ban");
+                            return;
+                        }
                         for (Player player:getOnlinePlayers()){
                             String playername = player.getName();
                             if (playername.equals(name)){
